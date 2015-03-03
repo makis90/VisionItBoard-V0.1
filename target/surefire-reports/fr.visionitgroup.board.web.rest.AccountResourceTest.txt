@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: fr.visionitgroup.board.web.rest.AccountResourceTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.746 sec - in fr.visionitgroup.board.web.rest.AccountResourceTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.013 sec - in fr.visionitgroup.board.web.rest.AccountResourceTest

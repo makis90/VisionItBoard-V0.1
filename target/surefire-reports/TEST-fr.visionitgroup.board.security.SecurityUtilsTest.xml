@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="fr.visionitgroup.board.security.SecurityUtilsTest" time="0.068" tests="3" errors="0" skipped="0" failures="0">
+<testsuite name="fr.visionitgroup.board.security.SecurityUtilsTest" time="0.037" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="P:\opt\Java\jdk1.8.0_31\jre\bin"/>
@@ -27,7 +27,7 @@
     <property name="os.name" value="Windows 7"/>
     <property name="classworlds.conf" value="P:\opt\apache-maven-3.2.5\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="P:\opt\Java\jdk1.8.0_31\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;.;P:\bin;P:\opt\Java\jdk1.8.0_31\bin;;C:\Windows;C:\Windows\System32;P:\opt\PostgreSQL\pgsql\bin;P:\opt\mysql-5.6.10-winx64\bin;P:\opt\svn\bin;P:\opt\git\bin;P:\opt\git\bin;P:\opt\apache-maven-3.2.5\bin;P:\opt\nodejs;C:\Users\mkouki\AppData\Roaming\npm;."/>
+    <property name="java.library.path" value="P:\opt\Java\jdk1.8.0_31\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;.;P:\bin;P:\opt\Java\jdk1.8.0_31\bin;;C:\Windows;C:\Windows\System32;P:\opt\PostgreSQL\pgsql\bin;P:\opt\mysql-5.6.10-winx64\bin;P:\opt\svn\bin;P:\opt\git-1.9.5\bin;P:\opt\apache-maven-3.2.5\bin;P:\opt\nodejs;P:\opt\Heroku\bin;C:\Users\mkouki\AppData\Roaming\npm;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -61,7 +61,7 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testGetCurrentLogin" classname="fr.visionitgroup.board.security.SecurityUtilsTest" time="0.06"/>
+  <testcase name="testGetCurrentLogin" classname="fr.visionitgroup.board.security.SecurityUtilsTest" time="0.037"/>
   <testcase name="testIsAuthenticated" classname="fr.visionitgroup.board.security.SecurityUtilsTest" time="0"/>
-  <testcase name="testAnonymousIsNotAuthenticated" classname="fr.visionitgroup.board.security.SecurityUtilsTest" time="0.008"/>
+  <testcase name="testAnonymousIsNotAuthenticated" classname="fr.visionitgroup.board.security.SecurityUtilsTest" time="0"/>
 </testsuite>
