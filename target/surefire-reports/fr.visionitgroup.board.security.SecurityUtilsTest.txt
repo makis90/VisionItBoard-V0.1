@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: fr.visionitgroup.board.security.SecurityUtilsTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.16 sec - in fr.visionitgroup.board.security.SecurityUtilsTest
