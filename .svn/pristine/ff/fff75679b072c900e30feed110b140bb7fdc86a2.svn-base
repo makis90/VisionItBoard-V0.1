@@ -1,0 +1,39 @@
+<meta charset=utf-8>
+	<div class="list-group">
+   <a class="list-group-item active" style="background-color: gray">
+      <h4 class="list-group-item-heading">
+         Collaborateurs
+      </h4>
+   </a>
+   
+    <div class="form-group" >
+    <center>
+     		</br>
+     		 <input type="text"  ng-model="query" class="form-control"  placeholder="Recherche par tous les criteres" style="width: 22%;">
+    </center>
+    </div>
+    
+   <a href="#/detailscollaborateur/{{collaborateur.IDMOB_RESS}}" class="list-group-item collab"   ng-repeat="collaborateur in collaborateursEnMission | filter:query" ng-click="showDetailscollaborateur(collaborateur.IDMOB_RESS)" >
+      <span class="status" ng-class="getCollaborateurCssClass(collaborateur.IDMOB_RESS)"> </span>
+      <h4 class="list-group-item-heading">
+        <img src="../images/collaborateur.png" alt="" width="2%" height="2%" /> {{collaborateur.Nom}} {{collaborateur.Prenom}}
+      </h4>
+      <p class="list-group-item-text">
+        Fonction : {{collaborateur.FonctionRess}}  ,  Pole : {{collaborateur.POLE }}  ,  BU : {{collaborateur.BUsinessUnit}}  ,  Mail : {{collaborateur.MailVision}}
+      </p>
+   </a>
+    <a href="#/detailscollaborateur/{{collaborateur.IDMOB_RESS}}" class="list-group-item collab"   ng-repeat="collaborateur in collaborateursEnInter | filter:query" ng-click="showDetailscollaborateur(collaborateur.IDMOB_RESS)">
+     <span class="status" ng-class="getCollaborateurCssClass(collaborateur.IDMOB_RESS)"> </span>
+      <h4 class="list-group-item-heading">
+        <img src="../images/collaborateur.png" alt="" width="2%" height="2%" /> {{collaborateur.Nom}} {{collaborateur.Prenom}} 
+      </h4>
+      <p class="list-group-item-text">
+          Fonction : {{collaborateur.FonctionRess}}  ,  Pole : {{collaborateur.POLE }}  ,  BU : {{collaborateur.BUsinessUnit}}  ,  Mail : {{collaborateur.MailVision}}
+      </p>
+   </a>
+</div>
+
+
+	
+
+ 

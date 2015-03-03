@@ -1,0 +1,12 @@
+'use strict';
+
+angular.module('visionitboardApp')
+    .controller('_CollaborateurDetailController', function ($scope, $stateParams, Collaborateur) {
+        $scope.collaborateur = {};
+        $scope.load = function (id) {
+            Collaborateur.get({id: id}, function(result) {
+              $scope.collaborateur = result;
+            });
+        };
+        $scope.load($stateParams.id);
+    });

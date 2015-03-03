@@ -1,0 +1,138 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "num_enr",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Num_enr",
+            "fieldNameUnderscored": "num_enr"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "idmob_ress",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Idmob_ress",
+            "fieldNameUnderscored": "idmob_ress"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "nom",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Nom",
+            "fieldNameUnderscored": "nom"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "prenom",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Prenom",
+            "fieldNameUnderscored": "prenom"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "pole",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Pole",
+            "fieldNameUnderscored": "pole"
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "business_unit",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Business_unit",
+            "fieldNameUnderscored": "business_unit"
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "date_dispo",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Date_dispo",
+            "fieldNameUnderscored": "date_dispo"
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "nb_jours",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Nb_jours",
+            "fieldNameUnderscored": "nb_jours"
+        },
+        {
+            "fieldId": 9,
+            "fieldName": "tjm",
+            "fieldType": "BigDecimal",
+            "fieldNameCapitalized": "Tjm",
+            "fieldNameUnderscored": "tjm"
+        },
+        {
+            "fieldId": 10,
+            "fieldName": "fonction_ress",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Fonction_ress",
+            "fieldNameUnderscored": "fonction_ress"
+        },
+        {
+            "fieldId": 11,
+            "fieldName": "date_entree",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Date_entree",
+            "fieldNameUnderscored": "date_entree"
+        },
+        {
+            "fieldId": 12,
+            "fieldName": "date_sortie",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Date_sortie",
+            "fieldNameUnderscored": "date_sortie"
+        },
+        {
+            "fieldId": 13,
+            "fieldName": "observations",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Observations",
+            "fieldNameUnderscored": "observations"
+        },
+        {
+            "fieldId": 14,
+            "fieldName": "id_dossier",
+            "fieldType": "Integer",
+            "fieldNameCapitalized": "Id_dossier",
+            "fieldNameUnderscored": "id_dossier"
+        },
+        {
+            "fieldId": 15,
+            "fieldName": "tel_perso",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Tel_perso",
+            "fieldNameUnderscored": "tel_perso"
+        },
+        {
+            "fieldId": 16,
+            "fieldName": "tel_client",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Tel_client",
+            "fieldNameUnderscored": "tel_client"
+        },
+        {
+            "fieldId": 17,
+            "fieldName": "mail_vision",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Mail_vision",
+            "fieldNameUnderscored": "mail_vision"
+        },
+        {
+            "fieldId": 18,
+            "fieldName": "mission",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Mission",
+            "fieldNameUnderscored": "mission"
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": true,
+    "fieldsContainDateTime": false,
+    "changelogDate": "20150225143034"
+}

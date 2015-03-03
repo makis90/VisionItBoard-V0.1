@@ -1,0 +1,119 @@
+package fr.visionitgroup.board.web.rest;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.inject.Inject;
+import javax.servlet.http.HttpServletResponse;
+
+import org.hamcrest.collection.IsEmptyCollection;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.codahale.metrics.annotation.Timed;
+
+import fr.visionitgroup.board.domain.Collaborateur;
+import fr.visionitgroup.board.repository.CollaborateurRepository;
+
+/**
+ * REST controller for managing Collaborateur.
+ */
+@RestController
+@RequestMapping("/api")
+public class CollaborateurResource {
+
+    private final Logger log = LoggerFactory.getLogger(CollaborateurResource.class);
+
+    @Inject
+    private CollaborateurRepository collaborateurRepository;
+
+    /**
+     * POST  /collaborateurs -> Create a new collaborateur.
+     */
+    @RequestMapping(value = "/collaborateurs",
+            method = RequestMethod.POST,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public void create(@RequestBody Collaborateur collaborateur) {
+        log.debug("REST request to save Collaborateur : {}", collaborateur);
+        collaborateurRepository.save(collaborateur);
+    }
+
+    /**
+     * GET  /collaborateurs -> get all the collaborateurs.
+     */
+    @RequestMapping(value = "/collaborateurs",
+            method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public List<Collaborateur> getAll() {
+        log.debug("REST request to get all Collaborateurs");
+        List<Collaborateur> allCollabListValid = new ArrayList<Collaborateur>();
+        List<Collaborateur> allCollabList = new ArrayList<Collaborateur>();
+        allCollabList = collaborateurRepository.findAll();
+        for (Collaborateur collaborateur : allCollabList) {
+			if (collaborateur.getPole() != null && !collaborateur.getPole().isEmpty()  && !collaborateur.getPole().equals("UNKNOWN")
+					&& collaborateur.getBusiness_unit() != null && !collaborateur.getBusiness_unit().isEmpty() && collaborateur.getDate_dispo() != null 
+					&& collaborateur.getDate_entree() != null && collaborateur.getDate_sortie() != null 
+					&& !collaborateur.getDate_entree().isEmpty()  && !collaborateur.getDate_sortie().isEmpty()) {
+				allCollabListValid.add(collaborateur);
+			}
+		}
+        return allCollabListValid;
+    }
+
+    /**
+     * GET  /collaborateurs/:id -> get the "id" collaborateur.
+     
+    @RequestMapping(value = "/collaborateurs/{id}",
+            method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public ResponseEntity<Collaborateur> get(@PathVariable Long id, HttpServletResponse response) {
+        log.debug("REST request to get Collaborateur : {}", id);
+        Collaborateur collaborateur = collaborateurRepository.findOne(id);
+        if (collaborateur == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(collaborateur, HttpStatus.OK);
+    }
+    */
+    
+    /**
+     * GET  /rest/collaborateurs/:idmobRess -> get the "id" collaborateur.
+   */
+    @RequestMapping(value = "/collaborateurs/{idmobRess}",
+            method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Collaborateur> get(@PathVariable Integer idmobRess) {
+        log.debug("REST request to get Collaborateur : {}", idmobRess);
+        Collaborateur collaborateur = collaborateurRepository.findByIdmobRess(idmobRess);
+        
+        if (collaborateur == null) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(collaborateur, HttpStatus.OK);
+        
+    }
+      
+
+    /**
+     * DELETE  /collaborateurs/:id -> delete the "id" collaborateur.
+     */
+    @RequestMapping(value = "/collaborateurs/{id}",
+            method = RequestMethod.DELETE,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    @Timed
+    public void delete(@PathVariable Long id) {
+        log.debug("REST request to delete Collaborateur : {}", id);
+        collaborateurRepository.delete(id);
+    }
+}

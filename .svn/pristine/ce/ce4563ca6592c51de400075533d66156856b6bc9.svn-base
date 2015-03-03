@@ -1,0 +1,11 @@
+package fr.visionitgroup.board.repository;
+
+import fr.visionitgroup.board.domain.Collaborateur;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+/**
+ * Spring Data JPA repository for the Collaborateur entity.
+ */
+public interface CollaborateurRepository extends JpaRepository<Collaborateur,Long>{
+
+}

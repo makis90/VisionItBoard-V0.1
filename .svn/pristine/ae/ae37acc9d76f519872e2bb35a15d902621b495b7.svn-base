@@ -1,0 +1,91 @@
+<meta charset=utf-8>
+<center>
+<div id="details">
+		<header class="clearfix">
+			<div id="photo">
+				<img src="../images/engineer.png" alt="collaborateur avatar" width="60%" height="60%" />
+			</div>
+			<div id="info">			
+				<h1><span ng-class="cssInterEnMission">{{collaborateur.Nom}} {{collaborateur.Prenom}}</span></h1>
+				<br>
+				<table class="table table-responsive">
+					<tr><td>Fonction</td><td>{{collaborateur.FonctionRess}}</td></tr>
+					<tr><td>Pole</td><td>{{collaborateur.POLE}}</td></tr>
+					<tr><td>BU</td><td>{{collaborateur.BUsinessUnit}}</td></tr>
+					<tr><td>Date Disponibilité</td><td>{{collaborateur.DAte_Dispo}}</td></tr>
+					<tr><td>MailVision</td><td><a href="mailto:{{collaborateur.MailVision}}">{{collaborateur.MailVision}}</a></td></tr>
+					<tr><td>TelPerso</td><td><a href="mailto:{{collaborateur.TelPerso}}">{{collaborateur.TelPerso}}</a></td></tr>
+					<tr><td>TelClient</td><td><a href="mailto:{{collaborateur.TelClient}}">{{collaborateur.TelClient}}</a></td></tr>
+					<tr><td>TJM(€)</td><td><span id="tjm" >{{collaborateur.TJM}}</span></td></tr>
+					<tr><td>Tarif souhaité(€)</td><td><input type="number" class="form-control" id="tarif-souhaite" placeholder="tarif.."></td></tr>
+					<tr><td>Marge calculée(%)</td><td><span id="marge-calcule"></span></td></tr>
+				</table>		
+			</div>
+			
+		</header>
+		<header class="clearfix" style="text-align: center; margin: 1em 0;">
+			<table class="table table-responsive">
+					<tr style="font-weight: bold"><td>Marges(%)</td><td>Tarfis(€)</td></tr>
+					<tr ng-repeat="marge in tableauPourcentageMarges"><td><span id="marge1">{{marge[0]}}%</span></td><td><span id="tarif1">{{marge[1]}}€</span></td></tr>
+					
+			</table>
+		</header>
+</div>
+	</center> 
+	<script>
+	
+	
+	
+   	$(document).ready(function () {
+       $('#tarif-souhaite').keyup(function () { 
+    	   if(parseInt($(this).val()) >= parseInt($("#tjm").text()))
+    		   {
+    		   var margeCalcule = (($(this).val() -  $("#tjm").text() ) / $(this).val() *100);
+    		   	$('#marge-calcule').text(margeCalcule.toPrecision(3)+"%");	   
+    		   }
+    	   else{
+    		   $('#marge-calcule').text(0);	   
+    		   }
+    			  
+    	      
+   	});
+   });
+</script>
+<!-- <center>
+                 <div ng-class="cssInterEnMission" class="modal-header">
+                     <h4 class="modal-title" id="myCollaborateurLabel">{{collaborateur.Nom}} {{collaborateur.Prenom}}</h4>
+                     
+                 </div>
+                 <div class="modal-body">
+                     <div class="form-group">
+                         <label>Nom</label>
+                         <p>{{collaborateur.Nom}}</p>
+                     </div>
+                     <div class="form-group">
+                         <label>Prenom</label>
+                         <p>{{collaborateur.Prenom}}</p>
+                     </div>
+                     <div class="form-group">
+                         <label>Pole</label>
+                         <p>{{collaborateur.POLE}}</p>
+                     </div>
+                     <div class="form-group">
+                         <label>BU</label>
+                         <p>{{collaborateur.BUsinessUnit}}</p>
+                     </div>
+                     <div class="form-group">
+                         <label>Date_Dispo</label>
+                         <p>{{collaborateur.DAte_Dispo}}</p>
+                     </div>
+                     
+                     <div class="form-group">
+                         <label>MailVision</label>
+                         <p><a href="mailto:{{collaborateur.MailVision}}">{{collaborateur.MailVision}}</a></p>
+                     </div>
+                     <div class="form-group">
+                         <label>TelPerso</label>
+                         <p><a href="tel:{{collaborateur.TelPerso}}">{{collaborateur.TelPerso}}</a></p>
+                     </div>
+                 </div>
+                
+</center> -->

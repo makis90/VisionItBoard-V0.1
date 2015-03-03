@@ -1,0 +1,218 @@
+html, body, #map-canvas {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px
+}
+
+.well{
+	clear: both;
+}
+
+#panel{
+	float: left;
+    background: none repeat scroll 0 0 #fff;
+	border-radius: 5px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.61);
+    float: left;
+    display: block;
+    margin-right: 19px;
+    padding : 5px;
+}
+
+#map-canvas {
+	height: 600px;
+	float: left;
+	width: 710px;
+}
+
+
+.row{
+	float: left;
+}
+
+.rows{
+	display: block;
+	height: 80px;
+}
+
+.col-md-6{
+	width: 290px;
+	margin-right: 20px;
+}
+
+.accordion-toggle > .badge , .accordion-toggle > i{
+	float: right;
+	margin-left: 10px;
+}
+
+#missions > li > input{
+	margin-right: 10px;
+}
+
+.map{
+	width: 100%;
+}
+
+
+.competence{
+	width: 70px;
+	display: block;
+	float: left;
+}
+
+
+.collaborateurs ul{
+	list-style: none;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+	-webkit-padding-start: 0;
+}
+.collaborateur{
+	width: 50%;
+	padding: 10px 20px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	color: #555;
+	font-weight: bold;
+}
+.status{
+	float: left;
+height: 60px;
+border-radius: 20px;
+margin-right: 1%;
+width: 2%;
+	
+}
+.collab
+{
+	background-color: white;
+	color : gray !important;
+	padding: 10px 16px;
+	font-size: 18px;
+	line-height: 1.33;
+}
+.inter, .inter a{
+	background-color: #CF0608;
+	
+}
+.enmission ,.enmission a{
+	background-color: #52CF52;
+	
+}
+.inter-details, .inter-details a{
+	background-color: #CF0608;
+	color : white;
+	padding: 10px 16px;
+	font-size: 50px;
+	line-height: 1.33;
+}
+.enmission-details ,.enmission-details a{
+	background-color: #52CF52;
+	color : white;
+	padding: 10px 16px;
+	font-size: 50px;
+	line-height: 1.33;
+}
+ .swiper-container {
+        width: 100% ;
+        height: 90% ;
+    }
+.swiper-slide {
+        text-align: center ;
+        font-size: 18px ;
+        background: #fff ;
+
+        /* Center slide text vertically */
+        display: -webkit-box ;
+        display: -ms-flexbox ;
+        display: -webkit-flex ;
+        display: flex ;
+        -webkit-box-pack: center ;
+        -ms-flex-pack: center ;
+        -webkit-justify-content: center ;
+        justify-content: center ;
+        -webkit-box-align: center ;
+        -ms-flex-align: center ;
+        -webkit-align-items: center ;
+        align-items: center ;
+    }
+    
+    
+    
+    //toggle Buttons
+    
+button {
+    font-size: 0.857em;
+    padding-bottom: 0.167em;
+    border: none;
+    border-radius: 0.500em;
+    height: 1.750em;
+    width: 4.250em;
+    background-color: #EB7E10;
+    color: #FFF;
+    cursor: pointer;
+}
+button.selected {
+    background-color: #F2F2F2;
+    border: 0.083em solid #CDCDCD;
+    color: #666;
+}
+button.disabled {
+    background-color: #FFF;
+    border: 0.083em solid #F2F2F2;
+    color: #D7D7D7;
+}
+
+
+
+
+/*details collaborateurs design*/ 
+
+#details h1 { font-family: "Simonetta", "Trebuchet MS", Arial, sans-serif; color: #454545; font-size: 3.6em; margin-bottom: 6px; }
+#details h2 { font-family: "Simonetta", "Trebuchet MS", Arial, sans-serif; color: #484848; font-size: 2.5em; margin-bottom: 10px; text-decoration: underline; }
+#details h3 { font-family: "Trebuchet MS", Verdana, Arial, sans-serif; color: #777; font-weight: normal; font-size: 1.8em; margin-bottom: 10px; }
+#details h4 { font-family: "Trebuchet MS", Verdana, Arial, sans-serif; color: #656565; font-weight: bold; font-size: 1.75em; margin-bottom: 4px; }
+
+#details p { font-family: "Balthazar", "Droid Serif", serif; color: #565656; font-size: 1.8em; line-height: 1.4em; margin-bottom: 15px; padding-left: 35px; }
+#details small { font-family: "Balthazar", "Droid Serif", serif; color: #656565; font-size: 1.6em; display: block; margin-bottom: 6px; }
+#details ul { display: block; list-style: none; }
+#details ul li { padding-left: 45px; list-style-type: none; vertical-align: top; background: url('images/bullet.png') 25px 5px no-repeat; margin-bottom: 5px; font-family: "Balthazar", "Droid Serif", serif; color: #666; font-size: 1.6em; line-height: 2.3em; }
+
+#details img { border: 0; max-width: 90%;}
+
+/** @group core layout **/
+#details { width: 90%;margin: 0px 50px;  background: #fff;border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; -webkit-border-bottom-left-radius: 8px; -webkit-border-bottom-right-radius: 8px; -moz-border-radius-bottomleft: 8px; -moz-border-radius-bottomright: 8px; }
+
+#details header { width: 100%; }
+
+/** @group personal settings **/
+#details #info { float: left ;width: 45%;  margin-top: 0;margin-bottom: 12px; font-size: 1.6em; font-family: "Balthazar", "Droid Serif", serif; color: #656565;}
+#details #photo { float: left; width: 45%; }
+#details #photo img { 
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+-moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+background-color: #fff;
+border: 1px solid #ccc;
+padding: 5%; 
+margin-top: 10%; 
+ vertical-align: middle;
+}
+
+/*responsive*/
+@media only screen and (max-width: 850px) {
+	#details h1 { font-size: 4.5em; display: block; text-align: center;}
+	#details h3 { font-size: 2.2em;display: block; text-align: center; }
+	#details h2 { display: block; text-align: center; }
+	#details #info { float: none; display: block; text-align: center;width: 90%; }
+	#details #photo {float: none;display: block;text-align: center;width: 90%;}
+	#details { padding: 20px 15px; }
+	p { padding: 0; }
+}
+

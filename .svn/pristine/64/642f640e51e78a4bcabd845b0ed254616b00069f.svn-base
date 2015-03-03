@@ -1,0 +1,48 @@
+'use strict';
+
+angular.module('visionitboardApp')
+    .controller('_CollaborateurController', function ($scope, Collaborateur) {
+        $scope.collaborateurs = [];
+        $scope.loadAll = function() {
+            Collaborateur.query(function(result) {
+               $scope.collaborateurs = result;
+            });
+        };
+        $scope.loadAll();
+
+        $scope.create = function () {
+            Collaborateur.save($scope.collaborateur,
+                function () {
+                    $scope.loadAll();
+                    $('#saveCollaborateurModal').modal('hide');
+                    $scope.clear();
+                });
+        };
+
+        $scope.update = function (id) {
+            Collaborateur.get({id: id}, function(result) {
+                $scope.collaborateur = result;
+                $('#saveCollaborateurModal').modal('show');
+            });
+        };
+
+        $scope.delete = function (id) {
+            Collaborateur.get({id: id}, function(result) {
+                $scope.collaborateur = result;
+                $('#deleteCollaborateurConfirmation').modal('show');
+            });
+        };
+
+        $scope.confirmDelete = function (id) {
+            Collaborateur.delete({id: id},
+                function () {
+                    $scope.loadAll();
+                    $('#deleteCollaborateurConfirmation').modal('hide');
+                    $scope.clear();
+                });
+        };
+
+        $scope.clear = function () {
+            $scope.collaborateur = {num_enr: null, idmob_ress: null, nom: null, prenom: null, pole: null, business_unit: null, date_dispo: null, nb_jours: null, tjm: null, fonction_ress: null, date_entree: null, date_sortie: null, observations: null, id_dossier: null, tel_perso: null, tel_client: null, mail_vision: null, mission: null, id: null};
+        };
+    });

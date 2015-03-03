@@ -1,0 +1,24 @@
+
+ <div class="swiper-container" style="height:100%;"> 
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-hash="slide1" ><div id="columnchart_pole_div" style="width:95%;height:95%;"></div></div> 
+            <div class="swiper-slide" data-hash="slide2"><div id="columnchart_bu_div" style="width:95%;height:95%;" ></div> </div> 
+            <div class="swiper-slide" data-hash="slide3"> <div id="combochart_entree_sortie_div" style="width:95%;height:95%;"></div> </div>
+            <div class="swiper-slide" data-hash="slide4"> <div id="columnchart_inter_par_pole_div" style="width:95%;height:95%;"></div> </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div> 
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+	<script>
+	var swiper = new Swiper('.swiper-container', {
+		pagination: '.swiper-pagination',
+        paginationClickable: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 30,
+        hashnav: false
+		 });
+	</script>

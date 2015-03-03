@@ -1,0 +1,19 @@
+{
+  "generator-jhipster": {
+    "baseName": "VisionItBoard",
+    "packageName": "fr.visionitgroup.board",
+    "packageFolder": "fr/visionitgroup/board",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "useCompass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "7",
+    "rememberMeKey": "0e96725e4191be72c8690eff17e50d9a62bd7bfc"
+  }
+}

@@ -1,0 +1,227 @@
+<div>
+
+    <h2 translate="visionitboardApp.collaborateur.home.title">Collaborateur</h2>
+
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#saveCollaborateurModal" ng-click="clear()">
+        <span class="glyphicon glyphicon-flash"></span> <span translate="visionitboardApp.collaborateur.home.createLabel">Create a new Collaborateur</span>
+    </button>
+    <div class="modal fade" id="saveCollaborateurModal" tabindex="-1" role="dialog" aria-labelledby="myCollaborateurLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="editForm" role="form" novalidate
+                      class="ng-scope ng-invalid ng-invalid-required ng-dirty ng-valid-minlength"
+                      ng-submit="create()">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myCollaborateurLabel" translate="visionitboardApp.collaborateur.home.createOrEditLabel">Create or edit a Collaborateur</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="collaborateur.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="visionitboardApp.collaborateur.num_enr">Num_enr</label>
+                            <input type="number" class="form-control" name="num_enr"
+                                   ng-model="collaborateur.num_enr">
+                        </div>
+                        <div class="form-group">
+                            <label translate="visionitboardApp.collaborateur.idmob_ress">Idmob_ress</label>
+                            <input type="number" class="form-control" name="idmob_ress"
+                                   ng-model="collaborateur.idmob_ress">
+                        </div>
+                        <div class="form-group">
+                            <label translate="visionitboardApp.collaborateur.nom">Nom</label>
+                            <input type="text" class="form-control" name="nom"
+                                   ng-model="collaborateur.nom">
+                        </div>
+                        <div class="form-group">
+                            <label translate="visionitboardApp.collaborateur.prenom">Prenom</label>
+                            <input type="text" class="form-control" name="prenom"
+                                   ng-model="collaborateur.prenom">
+                        </div>
+                        <div class="form-group">
+                            <label translate="visionitboardApp.collaborateur.pole">Pole</label>
+                            <input type="text" class="form-control" name="pole"
+                                   ng-model="collaborateur.pole">
+                        </div>
+                        <div class="form-group">
+                            <label translate="visionitboardApp.collaborateur.business_unit">Business_unit</label>
+                            <input type="text" class="form-control" name="business_unit"
+                                   ng-model="collaborateur.business_unit">
+                        </div>
+                        <div class="form-group">
+                            <label translate="visionitboardApp.collaborateur.date_dispo">Date_dispo</label>
+                            <input type="text" class="form-control" name="date_dispo"
+                                   ng-model="collaborateur.date_dispo">
+                        </div>
+                        <div class="form-group">
+                            <label translate="visionitboardApp.collaborateur.nb_jours">Nb_jours</label>
+                            <input type="number" class="form-control" name="nb_jours"
+                                   ng-model="collaborateur.nb_jours">
+                        </div>
+                        <div class="form-group">
+                            <label translate="visionitboardApp.collaborateur.tjm">Tjm</label>
+                            <input type="text" class="form-control" name="tjm"
+                                   ng-model="collaborateur.tjm">
+                        </div>
+                        <div class="form-group">
+                            <label translate="visionitboardApp.collaborateur.fonction_ress">Fonction_ress</label>
+                            <input type="text" class="form-control" name="fonction_ress"
+                                   ng-model="collaborateur.fonction_ress">
+                        </div>
+                        <div class="form-group">
+                            <label translate="visionitboardApp.collaborateur.date_entree">Date_entree</label>
+                            <input type="text" class="form-control" name="date_entree"
+                                   ng-model="collaborateur.date_entree">
+                        </div>
+                        <div class="form-group">
+                            <label translate="visionitboardApp.collaborateur.date_sortie">Date_sortie</label>
+                            <input type="text" class="form-control" name="date_sortie"
+                                   ng-model="collaborateur.date_sortie">
+                        </div>
+                        <div class="form-group">
+                            <label translate="visionitboardApp.collaborateur.observations">Observations</label>
+                            <input type="text" class="form-control" name="observations"
+                                   ng-model="collaborateur.observations">
+                        </div>
+                        <div class="form-group">
+                            <label translate="visionitboardApp.collaborateur.id_dossier">Id_dossier</label>
+                            <input type="number" class="form-control" name="id_dossier"
+                                   ng-model="collaborateur.id_dossier">
+                        </div>
+                        <div class="form-group">
+                            <label translate="visionitboardApp.collaborateur.tel_perso">Tel_perso</label>
+                            <input type="text" class="form-control" name="tel_perso"
+                                   ng-model="collaborateur.tel_perso">
+                        </div>
+                        <div class="form-group">
+                            <label translate="visionitboardApp.collaborateur.tel_client">Tel_client</label>
+                            <input type="text" class="form-control" name="tel_client"
+                                   ng-model="collaborateur.tel_client">
+                        </div>
+                        <div class="form-group">
+                            <label translate="visionitboardApp.collaborateur.mail_vision">Mail_vision</label>
+                            <input type="text" class="form-control" name="mail_vision"
+                                   ng-model="collaborateur.mail_vision">
+                        </div>
+                        <div class="form-group">
+                            <label translate="visionitboardApp.collaborateur.mission">Mission</label>
+                            <input type="text" class="form-control" name="mission"
+                                   ng-model="collaborateur.mission">
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteCollaborateurConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="deleteForm" ng-submit="confirmDelete(collaborateur.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="visionitboardApp.collaborateur.delete.question" translate-values="{id: '{{collaborateur.id}}'}">Are you sure you want to delete this Collaborateur?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="deleteForm.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th translate="visionitboardApp.collaborateur.num_enr">Num_enr</th>
+                    <th translate="visionitboardApp.collaborateur.idmob_ress">Idmob_ress</th>
+                    <th translate="visionitboardApp.collaborateur.nom">Nom</th>
+                    <th translate="visionitboardApp.collaborateur.prenom">Prenom</th>
+                    <th translate="visionitboardApp.collaborateur.pole">Pole</th>
+                    <th translate="visionitboardApp.collaborateur.business_unit">Business_unit</th>
+                    <th translate="visionitboardApp.collaborateur.date_dispo">Date_dispo</th>
+                    <th translate="visionitboardApp.collaborateur.nb_jours">Nb_jours</th>
+                    <th translate="visionitboardApp.collaborateur.tjm">Tjm</th>
+                    <th translate="visionitboardApp.collaborateur.fonction_ress">Fonction_ress</th>
+                    <th translate="visionitboardApp.collaborateur.date_entree">Date_entree</th>
+                    <th translate="visionitboardApp.collaborateur.date_sortie">Date_sortie</th>
+                    <th translate="visionitboardApp.collaborateur.observations">Observations</th>
+                    <th translate="visionitboardApp.collaborateur.id_dossier">Id_dossier</th>
+                    <th translate="visionitboardApp.collaborateur.tel_perso">Tel_perso</th>
+                    <th translate="visionitboardApp.collaborateur.tel_client">Tel_client</th>
+                    <th translate="visionitboardApp.collaborateur.mail_vision">Mail_vision</th>
+                    <th translate="visionitboardApp.collaborateur.mission">Mission</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="collaborateur in collaborateurs">
+                    <td><a ui-sref="collaborateurDetail({id:collaborateur.id})">{{collaborateur.id}}</a></td>
+                    <td>{{collaborateur.num_enr}}</td>
+                    <td>{{collaborateur.idmob_ress}}</td>
+                    <td>{{collaborateur.nom}}</td>
+                    <td>{{collaborateur.prenom}}</td>
+                    <td>{{collaborateur.pole}}</td>
+                    <td>{{collaborateur.business_unit}}</td>
+                    <td>{{collaborateur.date_dispo}}</td>
+                    <td>{{collaborateur.nb_jours}}</td>
+                    <td>{{collaborateur.tjm}}</td>
+                    <td>{{collaborateur.fonction_ress}}</td>
+                    <td>{{collaborateur.date_entree}}</td>
+                    <td>{{collaborateur.date_sortie}}</td>
+                    <td>{{collaborateur.observations}}</td>
+                    <td>{{collaborateur.id_dossier}}</td>
+                    <td>{{collaborateur.tel_perso}}</td>
+                    <td>{{collaborateur.tel_client}}</td>
+                    <td>{{collaborateur.mail_vision}}</td>
+                    <td>{{collaborateur.mission}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="collaborateurDetail({id:collaborateur.id})"
+                                class="btn btn-info">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="update(collaborateur.id)"
+                                class="btn btn-primary">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(collaborateur.id)"
+                                class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

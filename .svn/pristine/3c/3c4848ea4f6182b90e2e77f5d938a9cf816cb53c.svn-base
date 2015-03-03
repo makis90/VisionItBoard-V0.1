@@ -1,0 +1,166 @@
+
+<div>
+    <h2><span translate="visionitboardApp.collaborateur.detail.title">Collaborateur</span> {{collaborateur.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th translate="entity.detail.field">Field</th>
+                    <th translate="entity.detail.value">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span translate="visionitboardApp.collaborateur.num_enr">Num_enr</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{collaborateur.num_enr}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="visionitboardApp.collaborateur.idmob_ress">Idmob_ress</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{collaborateur.idmob_ress}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="visionitboardApp.collaborateur.nom">Nom</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{collaborateur.nom}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="visionitboardApp.collaborateur.prenom">Prenom</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{collaborateur.prenom}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="visionitboardApp.collaborateur.pole">Pole</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{collaborateur.pole}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="visionitboardApp.collaborateur.business_unit">Business_unit</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{collaborateur.business_unit}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="visionitboardApp.collaborateur.date_dispo">Date_dispo</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{collaborateur.date_dispo}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="visionitboardApp.collaborateur.nb_jours">Nb_jours</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{collaborateur.nb_jours}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="visionitboardApp.collaborateur.tjm">Tjm</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{collaborateur.tjm}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="visionitboardApp.collaborateur.fonction_ress">Fonction_ress</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{collaborateur.fonction_ress}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="visionitboardApp.collaborateur.date_entree">Date_entree</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{collaborateur.date_entree}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="visionitboardApp.collaborateur.date_sortie">Date_sortie</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{collaborateur.date_sortie}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="visionitboardApp.collaborateur.observations">Observations</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{collaborateur.observations}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="visionitboardApp.collaborateur.id_dossier">Id_dossier</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{collaborateur.id_dossier}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="visionitboardApp.collaborateur.tel_perso">Tel_perso</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{collaborateur.tel_perso}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="visionitboardApp.collaborateur.tel_client">Tel_client</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{collaborateur.tel_client}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="visionitboardApp.collaborateur.mail_vision">Mail_vision</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{collaborateur.mail_vision}}" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span translate="visionitboardApp.collaborateur.mission">Mission</span>
+                    </td>
+                    <td>
+                        <input type="text" class="input-sm form-control" value="{{collaborateur.mission}}" readonly>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            ui-sref="collaborateur"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,36 @@
+{
+    "visionitboardApp": {
+        "collaborateur" : {
+            "home": {
+                "title": "Collaborateurs",
+                "createLabel": "Créer un nouveau Collaborateur",
+                "createOrEditLabel": "Créer ou éditer un Collaborateur"
+            },
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Collaborateur {{ id }} ?"
+            },
+            "detail": {
+                "title": "Collaborateur"
+            },
+            "num_enr": "Num_enr",
+            "idmob_ress": "Idmob_ress",
+            "nom": "Nom",
+            "prenom": "Prenom",
+            "pole": "Pole",
+            "business_unit": "Business_unit",
+            "date_dispo": "Date_dispo",
+            "nb_jours": "Nb_jours",
+            "tjm": "Tjm",
+            "fonction_ress": "Fonction_ress",
+            "date_entree": "Date_entree",
+            "date_sortie": "Date_sortie",
+            "observations": "Observations",
+            "id_dossier": "Id_dossier",
+            "tel_perso": "Tel_perso",
+            "tel_client": "Tel_client",
+            "mail_vision": "Mail_vision",
+            "mission": "Mission"
+        }
+    }
+}
+

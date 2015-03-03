@@ -1,0 +1,22 @@
+
+ <div class="swiper-container" style="height:100%;"> 
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"  style="display:list-item;"> 
+            <div id="columnchart_pole_div" style="width:95%;height:95%;"></div>
+            <div id="columnchart_bu_div" style="width:95%;height:95%;" ></div> 
+            </div>
+            <div class="swiper-slide"> <div id="combochart_entree_sortie_div" style="width:95%;height:95%;"></div> </div>
+            <div class="swiper-slide"> <div id="columnchart_inter_par_pole_div" style="width:95%;height:95%;"></div> </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div> 
+    </div>
+	<script>
+	var swiper = new Swiper('.swiper-container', {
+      	pagination: '.swiper-pagination',
+    paginationClickable: true
+		 });
+	
+	$("#columnchart_bu_div").hide("slow");
+		$("#columnchart_bu_div").css("display","none");
+	</script>
